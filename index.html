@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital Mobile</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar com Pills -->
+    <nav class="navbar-pills">
+        <ul class="nav nav-pills nav-fill" id="bookTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="fiction-tab" data-bs-toggle="pill" 
+                        data-bs-target="#fiction" type="button" role="tab" 
+                        data-bs-toggle="tooltip" title="Livros de ficção e romance">
+                    <i class="fas fa-heart me-1"></i>Ficção
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="mystery-tab" data-bs-toggle="pill" 
+                        data-bs-target="#mystery" type="button" role="tab"
+                        data-bs-toggle="tooltip" title="Mistério e suspense">
+                    <i class="fas fa-search me-1"></i>Misterio
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="scifi-tab" data-bs-toggle="pill" 
+                        data-bs-target="#scifi" type="button" role="tab"
+                        data-bs-toggle="tooltip" title="Romance">
+                    <i class="fas fa-rocket me-1"></i>Romance
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="biography-tab" data-bs-toggle="pill" 
+                        data-bs-target="#biography" type="button" role="tab"
+                        data-bs-toggle="tooltip" title="Biografias e memórias">
+                    <i class="fas fa-user me-1"></i>Biografia
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="selfhelp-tab" data-bs-toggle="pill" 
+                        data-bs-target="#selfhelp" type="button" role="tab"
+                        data-bs-toggle="tooltip" title="Autoajuda e desenvolvimento">
+                    <i class="fas fa-lightbulb me-1"></i>Autoajuda
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Área de Conteúdo -->
+    <div class="content-area">
+        <div class="tab-content" id="bookTabsContent">
+            <!-- Ficção -->
+            <div class="tab-pane fade show active" id="fiction" role="tabpanel">
+                <div class="spinner-container" id="fiction-spinner">
+                    <div class="custom-spinner"></div>
+                </div>
+                <div id="fiction-content" style="display: none;">
+                    <h3 class="mb-4 text-center">
+                        <i class="fas fa-heart text-danger me-2"></i>Livros de Ficção
+                    </h3>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="book-card">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="imagens/era uma vez um coração partido.jpg" 
+                                             alt="Era uma vez um coração partido" class="book-image">
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 class="book-title">Era uma vez um coração partido</h5>
+                                        <p class="book-author"> Stephanie Garber
+                                        </p>
+                                        <div class="rating mb-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <small class="text-muted">4.8/5</small>
+                                        </div>
+                                        <p class="book-description">Evangeline Raposa cresce em um mundo de contos de fadas e crenças em finais felizes, mas suas convicções são abaladas quando ela descobre que o homem que ama vai se casar com outra pessoa. Acreditando que um feitiço foi usado, ela busca a ajuda do temido Príncipe de Copas, um ser imortal envolvido em lendas sombrias. </p>
+                                        <span class="genre-badge">Ficção e Romance</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="book-card">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="imagens/Powerless.jpg" 
+                                             alt="Powerless" class="book-image">
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 class="book-title">Powerless</h5>
+                                        <p class="book-author">Lauren Roberts</p>
+                                        <div class="rating mb-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <small class="text-muted">4.9/5</small>
+                                        </div>
+                                        <p class="book-description">num reino onde pessoas com poderes mágicos, os Notáveis, baniram os Comuns (sem poderes) por medo de contágio e fraqueza. A protagonista, Paedyn, é uma Comum que se disfarça de Notável para sobreviver. O enredo se desenvolve quando ela é forçada a participar das brutais Provas do Expurgo e se envolve romanticamente com Kai, um dos príncipes, que pode descobrir seu segredo. </p>
+                                        <span class="genre-badge">Ficção e Romance</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mistério -->
+            <div class="tab-pane fade" id="mystery" role="tabpanel">
+                <div class="spinner-container" id="mystery-spinner">
+                    <div class="custom-spinner"></div>
+                </div>
+                <div id="mystery-content" style="display: none;">
+                    <h3 class="mb-4 text-center">
+                        <i class="fas fa-search text-warning me-2"></i>Livros de Mistério
+                    </h3>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="book-card">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="imagens/manual de assassinato para boas garotas.jpg" 
+                                             alt="Manual de assassinato para boas garotas" class="book-image">
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 class="book-title">Manual de assassinato para boas garotas</h5>
+                                        <p class="book-author">Holly Jackson</p>
+                                        <div class="rating mb-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <small class="text-muted">4.3/5</small>
+                                        </div>
+                                        <p class="book-description">A estudante Pip está convencida de que Sal não é o verdadeiro responsável pela morte da namorada, Andie. Para comprovar sua teoria, ela se envolve em uma perigosa investigação que pode colocar em risco sua própria vida.</p>
+                                        <span class="genre-badge">Mistério</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="book-card">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="imagens/Verity.jpg" 
+                                             alt="verity" class="book-image">
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 class="book-title">Verity</h5>
+                                        <p class="book-author">Colleen Hoover
+                                        </p>
+                                        <div class="rating mb-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <small class="text-muted">4.7/5</small>
+                                        </div>
+                                        <p class="book-description">onta a história da escritora Lowen Ashleigh, que é contratada para terminar a série de livros da renomada autora Verity Crawford, que sofreu um acidente e ficou incapacitada de escrever. Ao revisar os manuscritos de Verity, Lowen descobre um diário secreto e perturbador que revela segredos chocantes sobre a vida da família Crawford, levando-a a questionar o que é verdade e o que é mentira.</p>
+                                        <span class="genre-badge">Mistério</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ficção Científica -->
+            <div class="tab-pane fade" id="scifi" role="tabpanel">
+                <div class="spinner-container" id="scifi-spinner">
+                    <div class="custom-spinner"></div>
+                </div>
+                <div id="scifi-content" style="display: none;">
+                    <h3 class="mb-4 text-center">
+                        <i class="fas fa-rocket text-primary me-2"></i>Romance
+                    </h3>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="book-card">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="imagens/melhor do que nos filmes.jpg" 
+                                             alt="Melhor do que nos filmes" class="book-image">
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 class="book-title">Melhor do que nos filmes</h5>
+                                        <p class="book-author">Lynn Painter</p>
+                                        <div class="rating mb-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <small class="text-muted">4.6/5</small>
+                                        </div>
+                                        <p class="book-description">Conta a história de Liz, uma adolescente apaixonada por comédias românticas que sonha com seu próprio "felizes para sempre". Quando seu amor de infância, Michael, retorna, Liz bola um plano para conquistá-lo, mas acaba se aproximando do vizinho irritante, Wes. A obra explora temas como o primeiro amor, o crescimento pessoal e o amadurecimento.</p>
+                                        <span class="genre-badge">Romance</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="book-card">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="imagens/Não é como nos filmes ⚾️🎬♡.jpg" 
+                                             alt="Não é como nos filmes" class="book-image">
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 class="book-title">Não é como nos filmes</h5>
+                                        <p class="book-author">Lynn Painter</p>
+                                        <div class="rating mb-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <small class="text-muted">5</small>
+                                        </div>
+                                        <p class="book-description">Wes e Liz, protagonistas do livro anterior de Lynn Painter, "Melhor do que nos filmes". A história acompanha a segunda chance de Wes para reconquistar Liz após um acidente trágico na sua família o forçar a abandonar a faculdade e terminar o namoro. O livro explora o amadurecimento dos personagens e a complexidade de um relacionamento verdadeiro.</p>
+                                        <span class="genre-badge">Romance</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Biografia -->
+            <div class="tab-pane fade" id="biography" role="tabpanel">
+                <div class="spinner-container" id="biography-spinner">
+                    <div class="custom-spinner"></div>
+                </div>
+                <div id="biography-content" style="display: none;">
+                    <h3 class="mb-4 text-center">
+                        <i class="fas fa-user text-success me-2"></i>Biografias
+                    </h3>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="book-card">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=300&h=400&fit=crop" 
+                                             alt="Steve Jobs" class="book-image">
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 class="book-title">Steve Jobs</h5>
+                                        <p class="book-author">Walter Isaacson</p>
+                                        <div class="rating mb-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <small class="text-muted">4.4/5</small>
+                                        </div>
+                                        <p class="book-description">A biografia definitiva do cofundador da Apple.</p>
+                                        <span class="genre-badge">Tecnologia</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="book-card">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="imagens/O diário de Anne Frank.jpg" 
+                                             alt="Diário de Anne Frank" class="book-image">
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 class="book-title">O Diário de Anne Frank</h5>
+                                        <p class="book-author">Anne Frank</p>
+                                        <div class="rating mb-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <small class="text-muted">4.9/5</small>
+                                        </div>
+                                        <p class="book-description">Relato comovente de uma jovem durante a Segunda Guerra Mundial.</p>
+                                        <span class="genre-badge">História</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Autoajuda -->
+            <div class="tab-pane fade" id="selfhelp" role="tabpanel">
+                <div class="spinner-container" id="selfhelp-spinner">
+                    <div class="custom-spinner"></div>
+                </div>
+                <div id="selfhelp-content" style="display: none;">
+                    <h3 class="mb-4 text-center">
+                        <i class="fas fa-lightbulb text-info me-2"></i>Autoajuda
+                    </h3>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="book-card">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop" 
+                                             alt="Hábitos Atômicos" class="book-image">
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 class="book-title">Hábitos Atômicos</h5>
+                                        <p class="book-author">James Clear</p>
+                                        <div class="rating mb-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <small class="text-muted">4.7/5</small>
+                                        </div>
+                                        <p class="book-description">Guia prático para formar bons hábitos e eliminar os ruins.</p>
+                                        <span class="genre-badge">Produtividade</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="book-card">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="imagens/o poder do agora.jpg" 
+                                             alt="O Poder do Agora" class="book-image">
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 class="book-title">O Poder do Agora</h5>
+                                        <p class="book-author">Eckhart Tolle</p>
+                                        <div class="rating mb-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <small class="text-muted">4.5/5</small>
+                                        </div>
+                                        <p class="book-description">Guia espiritual para viver no momento presente.</p>
+                                        <span class="genre-badge">Espiritualidade</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
